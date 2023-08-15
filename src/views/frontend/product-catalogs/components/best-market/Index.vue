@@ -46,14 +46,9 @@ export default {
   },
   data: () => ({
     datas: [
-      { id: 1, name: "1", image: "/images/logo-banten.png" },
-      { id: 2, name: "2", image: "/images/logo-kab.png" },
-      { id: 3, name: "3", image: "/images/logo-banten.png" },
-      { id: 4, name: "4", image: "/images/logo-banten.png" },
-      { id: 5, name: "5", image: "/images/logo-banten.png" },
-      { id: 5, name: "6", image: "/images/logo-banten.png" },
-      { id: 5, name: "7", image: "/images/logo-banten.png" },
-      { id: 5, name: "8", image: "/images/logo-banten.png" },
+      { id: 1, name: "1", image: "/images/logo-atas.png" },
+      { id: 2, name: "2", image: "/images/logo-atas.png" },
+      { id: 3, name: "3", image: "/images/logo-atas.png" },
     ],
   }),
   computed: {
