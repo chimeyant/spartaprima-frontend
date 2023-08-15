@@ -2,7 +2,7 @@
   <div class="mt-16 animate__animated animate__fadeIn">
     <v-container>
       <v-row>
-        <v-col cols="4">
+        <v-col :cols="device.desktop ?4:12">
           <v-card>
             <v-card-title class="blue white--text">
               <v-icon class="mr-2 white--text">mdi-view-headline</v-icon>
@@ -70,7 +70,10 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="8">
+        <v-col
+          cols="8"
+          v-show="device.desktop"
+        >
           <v-carousel
             cycle
             :height="device.desktop ? `350` : `350`"
@@ -148,7 +151,7 @@
           <div class="mt-5 body-2">Menampilkan 1 - 14 produk dari total 14</div>
           <v-row class="mt-5">
             <v-col
-              cols="2"
+              :cols="device.desktop ? 3: 12"
               v-for="item in productfilters"
             >
               <div class="ant-market-box-product">
@@ -200,7 +203,10 @@
               class="mr-2"
               key="page-product"
             >mdi-gift</v-icon> Produk</v-tab>
-          <v-tab class="blue--text ant-font-viga"><v-icon
+          <v-tab
+            class="blue--text ant-font-viga"
+            v-show="false"
+          ><v-icon
               class="mr-2"
               key="page-umkm"
             >mdi-storefront</v-icon>UMKM</v-tab>
@@ -224,7 +230,7 @@
             </v-row>
             <v-row class="mt-5 pl-3">
               <v-col
-                cols="2"
+                :cols="device.desktop ? 2 :12"
                 v-for="(item,index) in products"
                 :kety="index"
               >

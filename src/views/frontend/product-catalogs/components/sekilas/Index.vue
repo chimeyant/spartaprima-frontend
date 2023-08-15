@@ -4,7 +4,7 @@
     <div class="mt-10">
       <v-container>
         <v-row>
-          <v-col cols="6">
+          <v-col class="hidden-sm-and-down col-sm-12 col-md-6">
             <v-row class="justify-content-center">
               <img
                 src="images/keluarga.png"
@@ -12,11 +12,9 @@
                 srcset=""
                 width="500"
               >
-
             </v-row>
-
           </v-col>
-          <v-col cols="6">
+          <v-col class="col-sm-12 col-md-6">
             <p
               style="text-align: justify;"
               class="body-2"

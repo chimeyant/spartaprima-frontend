@@ -25,8 +25,8 @@
       class="mt-10 mr-10"
     >
 
-      <v-toolbar-title>
-        <div class="pl-5 pr-5 mr-5">
+      <v-toolbar-title v-show="device.desktop">
+        <div class="pl-5 pr-5 mr-5 ">
           <img
             src="/images/logo-atas.png"
             width="100px"
@@ -44,8 +44,8 @@
       >
         <template v-for="(menu,index) in menus">
           <v-list-item
-            active-class="blue white--text rounded-pill animate__animated animate__bounce "
-            class="hidden-sm-and-down rounded-pill mr-2"
+            active-class="blue white--text rounded-pill animate__animated animate__bounce transparent "
+            class="hidden-md-and-down rounded-pill mr-2"
             link
             :to="menu.route"
             v-if="menu.type=='item'"
@@ -208,12 +208,11 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
-            v-show="device.mobile"
             icon
             light
             v-bind="attrs"
             v-on="on"
-            class="mt-4"
+            class="mt-4 hidden-md-and-up"
           >
             <v-icon color="black">mdi-menu</v-icon>
           </v-btn>
@@ -228,17 +227,12 @@
 
             <v-list-item>
               <v-list-item-title @click="$router.push({name:'infografis'})">
-                Data Inovasi
+                Visi Dan Misi
               </v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-title @click="$router.push({ name: 'dataset' })">
-                Kompetisi
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title @click="$router.push({ name: 'produsen-data' })">
-                Klinik Inovasi
+                Produk
               </v-list-item-title>
             </v-list-item>
 
